@@ -57,3 +57,19 @@ var Button = function (_React$Component) {
 }(React.Component);
 
 ReactDOM.render(React.createElement(Button, null), document.getElementById('prueba1'));
+
+function reloj() {
+
+	var now = new Date().toLocaleTimeString();
+
+	var dato = React.createElement(
+		'span',
+		null,
+		' ',
+		now
+	);
+
+	ReactDOM.render(dato, document.getElementById('reloj'));
+}
+
+setInterval(reloj, 1000);
